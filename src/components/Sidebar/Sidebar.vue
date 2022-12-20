@@ -986,7 +986,11 @@
           <p class="text-sm leading-5 uppercase">Section 2</p>
           <svg
             id="icon2"
-            class="transform rotate-180"
+            class="transform"
+            :class="{
+              transform: this.isSectionTwoVisible,
+              'rotate-180': this.isSectionTwoVisible,
+            }"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -1329,7 +1333,11 @@
           <p class="text-sm leading-5 uppercase">Section 3</p>
           <svg
             id="icon3"
-            class="rotate-180 transform"
+            class="transform"
+            :class="{
+              transform: this.isSectionThreeVisible,
+              'rotate-180': this.isSectionThreeVisible,
+            }"
             width="24"
             height="24"
             viewBox="0 0 24 24"
