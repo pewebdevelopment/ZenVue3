@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Hello from the Data Comopnent</h1>
     <h2 v-bind="$attrs">{{ title }}</h2>
     <h2>Likes - {{ likes }}</h2>
     <h2>Published - {{ isPublished ? "Yes" : "No" }}</h2>
