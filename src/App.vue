@@ -1,24 +1,15 @@
 <script setup>
-
 import SidebarComponent from "../src/components/Sidebar/Sidebar.vue";
 
 // import { RouterLink, RouterView } from 'vue-router'
-
 </script>
 
 <template>
-  
   <div>
- hi
+    <SidebarComponent />
 
-  <SidebarComponent/>
-
-  <RouterView />
-
-
-</div>
+    <RouterView />
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
