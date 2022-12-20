@@ -188,6 +188,10 @@
           <svg
             id="icon1"
             class="transform"
+            :class="{
+              transform: this.isSectionOneVisible,
+              'rotate-180': this.isSectionOneVisible,
+            }"
             width="24"
             height="24"
             viewBox="0 0 24 24"
