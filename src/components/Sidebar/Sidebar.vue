@@ -181,8 +181,8 @@
         class="flex flex-col justify-start items-center px-6 border-b border-gray-600 w-full"
       >
         <button
-          onclick="showMenu1(true)"
-          class="focus:outline-none focus:text-indigo-400 text-left text-white flex justify-between items-center w-full py-5 space-x-14"
+          @click="toggleVisible('SectionOne')"
+          class="focus:outline-none focus:text-indigo-400 text-left text-white flex justify-between items-center w-full py-5"
         >
           <p class="text-sm leading-5 uppercase">Section 1</p>
           <svg
@@ -206,6 +206,7 @@
         <div
           id="menu1"
           class="flex justify-start flex-col w-full md:w-auto items-start pb-1"
+          :class="{ hidden: this.isSectionOneVisible }"
         >
           <button
             class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
@@ -1313,9 +1314,7 @@
           </button>
         </div>
       </div>
-      <div
-        class="flex flex-col justify-between items-center h-full pb-6 px-6 w-full"
-      >
+      <div class="flex flex-col items-center h-full pb-6 px-6 w-full">
         <button
           onclick="showMenu3(true)"
           class="focus:outline-none focus:text-indigo-400 text-white flex justify-between items-center w-full py-5 space-x-14"
@@ -1888,50 +1887,32 @@
   </div>
 </template>
 
-<script></script>
-
-// replace the following code with Vue JS Code //
 <script>
-// let icon1 = document.getElementById("icon1");
-// let menu1 = document.getElementById("menu1");
-// export default {
-// methods: {
-// showMenu1 (flag) {
-//   if (flag) {
-//     icon1.classList.toggle("rotate-180");
-//     menu1.classList.toggle("hidden");
-//   }
-// },
-// let icon2 = document.getElementById("icon2");
-// const showMenu2 = (flag) => {
-//   if (flag) {
-//     icon2.classList.toggle("rotate-180");
-//   }
-// },
-// let icon3 = document.getElementById("icon3");
-// const showMenu3 = (flag) => {
-//   if (flag) {
-//     icon3.classList.toggle("rotate-180");
-//   }
-// },
-// let Main = document.getElementById("Main");
-// let open = document.getElementById("open");
-// let close = document.getElementById("close");
-// const showNav = (flag) => {
-//   if (flag) {
-//     Main.classList.toggle("-translate-x-full");
-//     Main.classList.toggle("translate-x-0");
-//     open.classList.toggle("hidden");
-//     close.classList.toggle("hidden");
-//   }
-// };
-// }
-// return {
-//     showMenu1,
-//     showMenu2,
-//     showMenu3,
-//     showNav
-// }
-// }
-//
+export default {
+  data() {
+    return {
+      isSectionOneVisible: false,
+      isSectionTwoVisible: false,
+      isSectionThreeVisible: false,
+    };
+  },
+  methods: {
+    toggleVisible(section) {
+      if (section === "SectionOne") {
+        this.isSectionOneVisible = !this.isSectionOneVisible;
+      }
+      if (section === "SectionTwo") {
+        this.isSectionTwoVisible = !this.isSectionTwoVisible;
+      }
+      if (section === "SectionThree") {
+        this.isSectionThreeVisible = !this.isSectionThreeVisible;
+      }
+    },
+  },
+  computed: {
+    isVisibleClass() {
+      // return this.$store.getters.styleClass;
+    },
+  },
+};
 </script>
