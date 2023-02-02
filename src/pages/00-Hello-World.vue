@@ -4,13 +4,20 @@
   </div>
 </template>
 
+//
 <script>
 import HelloWorld from "../components/00-Hello-World/HelloWorld.vue";
 export default {
-  components: {
-    HelloWorld,
-  },
+  // components: {
+  //   HelloWorld,
+  // },
 };
+</script>
+
+//
+<script setup>
+// import HelloWorld from "../components/00-Hello-World/HelloWorld.vue";
+//
 </script>
 
 <style scoped></style>
