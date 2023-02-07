@@ -1,11 +1,15 @@
 <template>
     <div>
-
+        <TemplateRef/>
     </div>
 </template>
 
 <script>
-    export default {
+import TemplateRef from '../components/28-Composition-API-Ref-Reactive-Template-Refs/TemplateRef.vue'
+export default {
+    components: {
+            TemplateRef,
+        }
         
     }
 </script>

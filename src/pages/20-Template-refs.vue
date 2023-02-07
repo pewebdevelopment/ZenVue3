@@ -1,11 +1,16 @@
 <template>
     <div>
-
+        <TemplateRefs/>
     </div>
 </template>
 
 <script>
-    export default {
+import TemplateRefs from '../components/20-Template-refs/Template-refs.vue'
+export default {
+    name: '20-Template-refs',
+    components: {
+            TemplateRefs,
+        }
         
     }
 </script>
