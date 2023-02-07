@@ -1,11 +1,15 @@
 <template>
     <div>
-
+        <Watchers/>
     </div>
 </template>
 
 <script>
-    export default {
+import Watchers from '../components/09-Watchers/Watchers.vue'
+export default {
+    components: {
+            Watchers,
+        }
         
     }
 </script>

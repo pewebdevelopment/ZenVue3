@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "App",
+  name: "00-Hello-World",
 };
 </script>
 

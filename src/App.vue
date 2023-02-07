@@ -1,7 +1,7 @@
 <script setup>
 import SidebarComponent from "../src/components/Sidebar/Sidebar.vue";
 
-// import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
@@ -13,6 +13,26 @@ import SidebarComponent from "../src/components/Sidebar/Sidebar.vue";
 
 <style scoped>
 .body {
-  background-color: blue;
+  background-color: green;
+  position:relative;
+}
+.grid-cols-12{
+  display:flex;
+}
+.col-span-9{
+  position:fixed;
+  left:45%;
+  top:2rem;
+  height:90vh;
+  width:55%;
+  background-color:grey;
+  text-align:center;
+  padding-top:2rem;
+  font-size:25px;
+  overflow-y: scroll;
+  border-radius:20px;
+
+
+ 
 }
 </style>
